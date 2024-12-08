@@ -173,6 +173,9 @@ class ChainId(enum.IntEnum):
     #: beacuse Cosmos maintains its own registry
     osmosis = -100
 
+    #: Solana
+    solana = -200
+
     #: Python EVM test backend
     #:
     #: See https://github.com/ethereum/eth-tester/blob/84378ee7eb714633fbb3169378812ccfcbbd495a/eth_tester/backends/pyevm/main.py#L197
@@ -326,6 +329,17 @@ _CHAIN_DATA_OVERRIDES = {
     ChainId.osmosis.value: {
         "name": "Osmosis",
         "slug": "osmosis",
+        "svg_icon": None,
+        "active": False,
+        "dataless": True,
+    },
+
+    #
+    # Solana
+    #
+    ChainId.solana.value: {
+        "name": "Solana",
+        "slug": "Solana",
         "svg_icon": None,
         "active": False,
         "dataless": True,
